@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Information</title>
+</head>
+<body>
+    <h2>Donation Information</h2>
+    <ul>
+        {% for donation in donations %}
+        <li>{{ donation.person }} has donated {{ donation.amount }}Rs to {{ donation.orgname }}</li><br>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daan Srot - Organization Registration</title>
+<link rel="stylesheet" href="{% static 'orgregister.css' %}">
+</head>
+
+
+<header>
+  <nav>
+    <div class="container">
+      <h1 class="logo">Daan Srot</h1>
+      <ul class="nav-links">
+        <li class="align-right"><a href="{% url 'login-view' %}">Login</a></li>
+        <li class="align-right"><a href="{% url 'home-view' %}">Home</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<body>
+<section class="registration-section">
+  <div class="container">
+    <div class="registration-form">
+      <h2>Organization Registration</h2>
+      <form action="" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="organization_name">Name of Organization:</label>
+          <input type="text" id="organization_name" name="organization_name" required>
+        </div>
+        <div class="form-group">
+          <label for="registration_number">Registration No.:</label>
+          <input type="text" id="registration_number" name="registration_number" required>
+        </div>
+        <div class="form-group">
+          <label for="city">City:</label>
+          <input type="text" id="city" name="city" required>
+        </div>
+        <div class="form-group">
+          <label for="state">State:</label>
+          <input type="text" id="state" name="state" required>
+        </div>
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <textarea id="address" name="address" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="ngo_id">Unique Id of VO/NGO:</label>
+          <input type="text" id="ngo_id" name="ngo_id" required>
+        </div>
+        <div class="form-group">
+          <label for="org_type">Type:</label>
+          <input type="text" id="org_type" name="org_type" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone no. :</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="treasurer_name">Name of Treasurer:</label>
+          <input type="text" id="treasurer_name" name="treasurer_name" required>
+        </div>
+        <div class="form-group">
+          <label for="secretary_name">Name of Secretary:</label>
+          <input type="text" id="secretary_name" name="secretary_name" required>
+        </div>
+        <div class="form-group">
+          <label for="chairman_name">Name of Chairman:</label>
+          <input type="text" id="chairman_name" name="chairman_name" required>
+        </div>
+        <div class="form-group">
+          <label for="acc_holder_name">Account Holder Name:</label>
+          <input type="text" id="acc_holder_name" name="acc_holder_name" required>
+        </div>
+        <div class="form-group">
+          <label for="acc_number">Account Number:</label>
+          <input type="text" id="acc_number" name="acc_number" required>
+        </div>
+        <div class="form-group">
+          <label for="ifsc">IFSC:</label>
+          <input type="text" id="ifsc" name="ifsc" required>
+        </div>
+        <div class="form-group">
+          <label for="upi_id">upi_id:</label>
+          <input type="text" id="upi_id" name="upi_id" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm_password">Confirm Password:</label>
+          <input type="password" id="confirm_password" name="confirm_password" required>
+        </div>
+        <button type="submit" class="btn register-btn">Register</button>
+      </form>
+    </div>
+  </div>
+</section>
+</body>
+<!-- <footer>
+  <div class="container">
+    <p>&copy; 2024 Daan Srot. All rights reserved.</p>
+  </div>
+</footer> -->
+
+
+</html>

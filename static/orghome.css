@@ -1,0 +1,94 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  header {
+    background-image: url('10.jpg');
+    background-size: cover;
+  }
+  
+  nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+  }
+  
+  .logo {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  
+  .nav-links {
+    position:absolute;
+    top:2%;left:80%;
+    transform:translate(25%,-50%);
+    padding:10px;
+  }
+  
+  ul {
+    float: left;
+    display: flex;
+  }
+  
+  ul li {
+    list-style: none;
+    margin-left: 20px;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Donation form styles */
+  h2 {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="checkbox"],
+  textarea {
+    margin-bottom: 20px;
+  }
+  
+  button[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #555;
+  }
+  
+  h4 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  

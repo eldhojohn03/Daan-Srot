@@ -1,0 +1,33 @@
+<!-- organization_details.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization Details</title>
+</head>
+<body>
+    <h2>Organization Details</h2>
+    <p><strong>Name:</strong> {{ organization.org_name }}</p>
+    <p><strong>Registration No.:</strong> {{ organization.registration_no }}</p>
+    <p><strong>City:</strong> {{ organization.city }}</p>
+    <p><strong>State:</strong> {{ organization.state }}</p>
+    <p><strong>Phone:</strong> {{ organization.phone }}</p>
+    <p><strong>Organization Address:</strong> {{ organization.org_address }}</p>
+    <p><strong>Unique ID:</strong> {{ organization.unique_id }}</p>
+    <p><strong>Organization Type:</strong> {{ organization.org_type }}</p>
+    <p><strong>Name of Treasurer:</strong> {{ organization.name_treasurer }}</p>
+    <p><strong>Name of Secretary:</strong> {{ organization.name_secretary }}</p>
+    <p><strong>Name of Chairman:</strong> {{ organization.name_chairman }}</p>
+    <p><strong>Account Holder Name:</strong> {{ organization.acc_holder_name }}</p>
+    <p><strong>Account Number:</strong> {{ organization.acc_number }}</p>
+    <p><strong>IFSC:</strong> {{ organization.ifsc }}</p>
+    <p><strong>UPI ID:</strong> {{ organization.upi_id }}</p>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="checkbox" name="approved" value="True">
+        <label for="approve">Approve</label><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

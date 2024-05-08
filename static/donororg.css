@@ -1,0 +1,116 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #333;min-height: 70%vh;
+    width: 100%;
+    color: #fff;
+  }
+  
+  .navbar {
+    padding: 20px 0; /* Increased height */
+    height: auto; /* Allow the navbar to expand based on content */
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+  
+  /* .nav-links {
+    list-style: none;
+    float: right;
+  } */
+  .nav-links {
+    position:absolute;
+    top:0%;left:85%;
+    transform:translate(25%,-50%);
+    padding:5px;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .align-right {
+    float: right;
+  }
+  
+  /* Organization details section styles */
+  .org-details-section {
+    padding: 50px 0;
+  }
+  
+  .org-details {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  .org-details h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .detail {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  span {
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Donation section styles */
+  .donation-section {
+    text-align: center;
+  }
+  
+  .donation-section h2 {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+  }  

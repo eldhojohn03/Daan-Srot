@@ -1,0 +1,32 @@
+<!-- organizations_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizations List</title>
+</head>
+<body>
+    <h2>Organizations List</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Sl no.</th>
+                <th>Name</th>
+                <th>Place</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for organization in organizations %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+<td><a href="{% url 'admin-org' pk=organization.pk %}"">{{ organization.org_name }}</a></td>
+                <td>{{ organization.city }}</td>
+                <td>{{ organization.org_type }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

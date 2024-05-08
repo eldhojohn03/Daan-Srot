@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daan Srot - Charity Management System</title>
+<link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="container">
+      <h1 class="logo">Daan Srot</h1>
+      <ul class="nav-links">
+        <li><a href="{% url 'home-view' %}">Home</a></li>
+        <li><a href="{% url 'login-view' %}">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="hero-section">
+    <div class="container">
+      <h2>Welcome to Daan Srot</h2>
+      <p>Join us in our mission to make the world a better place.</p>
+      <div class="buttons">
+        <a href="{% url 'login-view' %}" class="btn donate-btn">Donate Now</a>
+        <a href="{% url 'org-signup' %}" class="btn register-btn">Organization Register</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="advertisement-section">
+  <div class="container">
+    <h2>Latest Donations</h2>
+    <div class="advertisement-content">
+      {% for donation in donations %}
+      <div class="advertisement-item">
+        <ul>
+          
+          <li><h3>{{ donation.person }} has donated {{ donation.amount }}Rs to {{ donation.orgname }}</h3></li>
+          
+      </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2024 Daan Srot. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

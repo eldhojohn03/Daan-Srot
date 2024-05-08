@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daan Srot - Donor Home</title>
+<link rel="stylesheet" href="{% static 'admin.css' %}">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="container">
+      <h1 class="logo">Daan Srot</h1>
+      <ul class="nav-links">
+        <li><a href="{% url 'home-view' %}">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li class="align-right"><a href="{% url 'logout-view' %}">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<section class="donor-home-section">
+  <div class="container">
+    <h2>Request From Organizations</h2>
+    </div>
+    <table class="organization-table">
+      <thead>
+        <tr>
+          <th>Sl no.</th>
+          <th>Name</th>
+          <th>Place</th>
+          <th>Type</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for organization in organizations %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+<td><a href="{% url 'admin-org' pk=organization.pk %}"">{{ organization.org_name }}</a></td>
+                <td>{{ organization.city }}</td>
+                <td>{{ organization.org_type }}</td>
+                <td><button class="cn" ><a href="{% url 'admin-org' pk=organization.pk %}">View Details</a></button> </td>
+            </tr>
+            {% endfor %}
+        <!-- Add more rows for other organizations -->
+        
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2024 Daan Srot. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

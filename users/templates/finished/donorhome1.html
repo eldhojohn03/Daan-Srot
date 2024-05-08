@@ -1,0 +1,61 @@
+<!-- organizations_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizations List</title>
+</head>
+<body>
+    <h2>Filter Options</h2>
+    <form action="" method="get">
+        <label for="filter_option">Filter Option:</label>
+        <select name="filter_option" id="filter_option">
+            <option value="None">None</option>
+            <option value="Place">Place</option>
+            <option value="Need">Need</option>
+        </select><br><br>
+        {% if filter_option == 'Place' %}
+        <label for="place_option">Select Place:</label>
+        <select name="place_option" id="place_option">
+            {% for place in places %}
+            <option value="{{ place }}">{{ place }}</option>
+            {% endfor %}
+        </select><br><br>
+        {% elif filter_option == 'Need' %}
+        <label for="need_option">Select Need:</label>
+        <select name="need_option" id="need_option">
+            {% for need in needs %}
+            <option value="{{ need }}">{{ need }}</option>
+            {% endfor %}
+        </select><br><br>
+        {% endif %}
+        <button type="submit">Apply Filter</button>
+    </form>
+    <p><a href="{% url 'donor-profile' %}">profile</a></p>
+    <h2>Organizations List</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Sl no.</th>
+                <th>Name</th>
+                <th>Place</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for organization in organizations %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td><a href="{% url 'donor-org' pk=organization.pk %}">{{ organization.org_name }}</a></td>
+                <td>{{ organization.city }}</td>
+                <td>{{ organization.org_type }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
+    
+

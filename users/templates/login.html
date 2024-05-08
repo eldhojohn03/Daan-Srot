@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daan Srot - Login</title>
+<link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="container">
+      <h1 class="logo">Daan Srot</h1>
+      <ul class="nav-links">
+        <li class="align-right"><a href="{% url 'home-view' %}">Home</a></li>
+        <!-- <li class="align-right"><a href="#">Sign Up</a></li> -->
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<section class="login-section">
+  <div class="container">
+    <div class="login-form">
+      <h2>Login</h2>
+      <form action="" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="username">Username or Email:</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="btn login-btn">Login</button>
+      </form>
+      <div class="create-account-link">
+        <a href="{% url 'donor-signup' %}" class="blue-link">Create new donor account</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2024 Daan Srot. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daan Srot - Details</title>
+<link rel="stylesheet" href="{% static 'donorprofile.css' %}">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="container">
+      <h1 class="logo">Daan Srot</h1>
+      <ul class="nav-links">
+        <li class="align-right"><a href="{% url 'logout-view' %}">Logout</a></li>
+        <li class="align-right"><a href="{% url 'home-view' %}">Home</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<section class="details-section">
+  <div class="container">
+    <div class="details-form">
+      <h2>Details</h2>
+      <div class="detail">
+        <label for="type">Type:</label>
+        <span>{{ donor.donortype }}</span>
+      </div>
+      <div class="detail">
+        <label for="name">Name:</label>
+        <span>{{ donor.name }}</span>
+      </div>
+      <div class="detail">
+        <label for="phone">Phone Number:</label>
+        <span>{{ donor.phone }}</span>
+      </div>
+      <div class="detail">
+        <label for="email">Email:</label>
+        <span>{{ donor.username }}</span>
+      </div>
+      <div class="detail">
+        <label for="address">Address:</label>
+        <span>{{ donor.address }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2024 Daan Srot. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

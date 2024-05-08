@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Organization Details - Daan Srot</title>
+<link rel="stylesheet" href="{% static 'donororg.css' %}">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="container">
+      <h1 class="logo">Daan Srot</h1>
+      <ul class="nav-links">
+        <li class="align-right"><a href="{% url 'logout-view' %}">Logout</a></li>
+        <li class="align-right"><a href="{% url 'home-view' %}">Home</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<section class="org-details-section">
+  <div class="container">
+    <div class="org-details">
+      <h2>Organization Details</h2>
+      <div class="detail">
+        <label>Name of Organization:</label>
+        <span>{{ org_name }}</span>
+      </div>
+      <div class="detail">
+        <label>Registration No.:</label>
+        <span>{{ registration_no }}</span>
+      </div>
+      <div class="detail">
+        <label>City:</label>
+        <span>{{ city }}</span>
+      </div>
+      <div class="detail">
+        <label>State:</label>
+        <span>{{ state }}</span>
+      </div>
+      <div class="detail">
+        <label>Phone:</label>
+        <span>{{ phone }}</span>
+      </div>
+      <div class="detail">
+        <label>Address:</label>
+        <span>{{ org_address }}</span>
+      </div>
+      <div class="detail">
+        <label>Unique Id of VO/NGO:</label>
+        <span>{{ unique_id }}</span>
+      </div>
+      <div class="detail">
+        <label>Type:</label>
+        <span>{{ org_type }}</span>
+      </div>
+      <div class="detail">
+        <label>Name of Treasurer:</label>
+        <span>{{ name_treasurer }}</span>
+      </div>
+      <div class="detail">
+        <label>Name of Secretary:</label>
+        <span>{{ name_secretary }}</span>
+      </div>
+      <div class="detail">
+        <label>Name of Chairman:</label>
+        <span>{{ name_chairman }}</span>
+      </div>
+      <div class="detail">
+        <label>Account holder name:</label>
+        <span>{{ acc_name }}</span>
+      </div><div class="detail">
+        <label>Account number:</label>
+        <span>{{ acc_no }}</span>
+      </div><div class="detail">
+        <label>IFSC:</label>
+        <span>{{ ifsc }}</span>
+      </div>
+      <div class="detail">
+        <label>UPI ID:</label>
+        <span>{{ upi_id }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="donation-section">
+  <div class="container">
+    <h2>Donate through bank account transfer or UPI payment</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+      <div class="form-group">
+        <label for="amount">Enter Amount:</label>
+        <input type="text" id="amount" name="amount" required>
+      </div>
+      <label for="advertise">Advertise:</label>
+        <input type="checkbox" id="advertise" name="advertise" value="True" required>
+      <button type="submit" class="btn donate-btn">Submit</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2024 Daan Srot. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

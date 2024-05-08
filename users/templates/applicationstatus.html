@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Status</title>
+    <link rel="stylesheet" href="{% static 'applicationstatus.css' %}">
+</head>
+<header>
+    <nav>
+      <div class="container">
+        <h1 class="logo">Daan Srot</h1>
+        <ul class="nav-links">
+          <li><a href="{% url 'home-view' %}">Home</a></li>
+          <li><a href="#">Profile</a></li>
+          <li class="align-right"><a href="{% url 'logout-view' %}">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+<body>
+    <h2>Application Status</h2>
+    {% if context.condition %}
+        <p>Application Rejected</p>
+    {% else %}
+        <p>Application under scrutiny</p>
+    {% endif %}
+</body>
+</html>

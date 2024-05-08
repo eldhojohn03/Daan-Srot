@@ -1,0 +1,31 @@
+<!-- donation_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Form</title>
+</head>
+<body>
+    <h2>Donation Form</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="clothes">Clothes:</label>
+        <input type="checkbox" id="clothes" name="clothes" value="True"><br>
+        
+        <label for="educational">Educational:</label>
+        <input type="checkbox" id="educational" name="educational" value="True"><br>
+        
+        <label for="food">Food:</label>
+        <input type="checkbox" id="food" name="food" value="True"><br>
+        
+        <label for="medicine">Medicine:</label>
+        <input type="checkbox" id="medicine" name="medicine" value="True"><br>
+        
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" rows="4" cols="50"></textarea><br>
+        
+        <button type="submit">Submit</button><h4>{{ result }}</h4>
+    </form>
+</body>
+</html>
